@@ -15,6 +15,9 @@ namespace SnakeAndLadder
         public void StartGame()
         {
             Console.WriteLine("Player starts at position {0}",Position);
+            int die = random.Next(1, 7);
+            Position += die;
+            Console.WriteLine(Position);
         }
     }
 }
