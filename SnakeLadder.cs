@@ -20,6 +20,7 @@ namespace SnakeAndLadder
             int Position = 0;
             int dice;
             int option;
+            int numOfDiceRoll=0;
             Console.WriteLine("Player starts at position {0}",Position);
            
    
@@ -27,9 +28,9 @@ namespace SnakeAndLadder
             while(Position < 100)
             {
                 dice = random.Next(1, 7);
-
+                numOfDiceRoll++;
                 Console.WriteLine("Number appeared in dice is:" +dice);
-
+                Console.WriteLine("Player now at position: " +Position);
                 //player option generation
                 option = random.Next(0, 3);
                 Console.WriteLine("Player option is: " +option);
@@ -62,26 +63,28 @@ namespace SnakeAndLadder
                 {
                     Position = Position;
                 }
-                Console.WriteLine("Player reaches at: " +Position);
+               
             }
+            Console.WriteLine("Player reaches at: " + Position);
+            Console.WriteLine("The number of times dice was played: " + numOfDiceRoll);
 
-           /* switch (option)
-            {
-                case Ladder:
-                    
-                   Position += die;
-                    break;
-                   
-                case Snake:
+            /* switch (option)
+             {
+                 case Ladder:
 
-                    Position -= die;
-                    break ;
-                default:
-                    Position = Position;
-                    break;
-            }
-            Console.WriteLine(Position);*/
-            
+                    Position += die;
+                     break;
+
+                 case Snake:
+
+                     Position -= die;
+                     break ;
+                 default:
+                     Position = Position;
+                     break;
+             }
+             Console.WriteLine(Position);*/
+
         }
     }
 }
