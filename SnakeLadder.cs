@@ -39,6 +39,7 @@ namespace SnakeAndLadder
                     if((Position + dice) > 100)
                     {
                         Position = 100;
+                        Console.WriteLine("Player moves to 100th position");
                     }
                     else
                     {
